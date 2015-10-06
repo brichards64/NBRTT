@@ -1,5 +1,42 @@
 #!/bin/bash
 
+log="0"
+rm -rf FullEvent
+rm -rf generatorcardfile
+mkdir FullEvent
+mkdir generatorcardfile
+
+
+cd ../compout
+
+
+./compareroot ../Validation/FullEvent/ ./FullEvent.root ../output/FullEvent.root
+
+
+
+if [ $? -eq 0 ]
+then
+fulleventroot=#FF0000
+log=" FullEvent.root VALIDATION FAIL "
+else
+fulleventroot=#00FF00
+fi
+
+
+./compareroot ../Validation/generatorcardfile/ ./generatorcardfile.root ../output/generatorcardfile.root
+
+if [ $? -eq 0 ]
+then
+gencardroot=#FF0000
+log=" generatorcardfile.root VALIDATION FAIL "
+else
+gencardroot=#00FF00
+fi
+
+cd ../Validation
+
+
+
 cp ../build/ts-titus/log/* ./
 
 CLHEP=#00FF00
@@ -8,7 +45,6 @@ root=#00FF00
 sandbox=#00FF00
 fullevent=#00FF00
 gencard=#00FF00
-log="0"
 
 if [ ! -e ../build/CLHEP/install/bin/clhep-config ]
 then
@@ -48,10 +84,10 @@ fi
 
 if [ $log -eq "0" ] 
 then
-log=" SUCSESSFULL "
+log="SUCSESSFUL"
 fi
 
-tail log.txt | cat log.txt
+tail -n 20 log.txt | cat log.txt
 echo  `date` " : " $log >>log.txt  
 
 echo "<head>
@@ -130,10 +166,23 @@ echo "
 
 
 <tr>
-  <td bgcolor=\""$gencard"\">generfatorcardfile.root</td>
+  <td bgcolor=\""$gencard"\">generatorcardfile.root</td>
   <td bgcolor=\""$gencard"\">File Created</td>
   <td bgcolor=\""$gencard"\">" `if [ $gencard == "#00FF00" ]; then echo 'PASS' ; else echo 'FAIL'; fi`"</td>
 </tr>
+
+<tr>
+  <td bgcolor=\""$fulleventroot"\"><a href='FullEvent/index.html'>FullEvent.root</td>
+  <td bgcolor=\""$fulleventroot"\">Physics Validation</td>
+  <td bgcolor=\""$fulleventroot"\">" `if [ $fulleventroot == "#00FF00" ]; then echo 'PASS' ; else echo 'FAIL'; fi`"</td>
+</tr>
+
+<tr>
+  <td bgcolor=\""$gencardroot"\"><a href='generatorcardfile/index.html'>generatorcardfile.root</td>
+  <td bgcolor=\""$gencardroot"\">Physics Validation</td>
+  <td bgcolor=\""$gencardroot"\">" `if [ $gencardroot == "#00FF00" ]; then echo 'PASS' ; else echo 'FAIL'; fi`"</td>
+</tr>
+
 
 </table>
 <h1 align='center'>&nbsp; </h1>
@@ -141,3 +190,7 @@ echo "
 </html>
 " >> index.html
 
+if [ $log != "SUCSESSFUL" ]
+then
+echo $log | mail -s “TITUS\ VALIDATION\ ERROR!!!!” b.richards@qmul.ac.uk
+fi
