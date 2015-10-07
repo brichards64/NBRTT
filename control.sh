@@ -4,7 +4,7 @@ cd /data/richards/NBRTT/
 ./runsim.sh
 
 cd Validation
-./makewebpage.sh
+./newmakewebpage.sh
 cd ..
 
 cp -r Validation /users/richards/public_html/

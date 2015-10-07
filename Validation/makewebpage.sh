@@ -84,7 +84,7 @@ fi
 
 if [ $log -eq "0" ] 
 then
-log="SUCSESSFUL"
+log="SUCCESSFUL"
 fi
 
 tail -n 20 log.txt | cat log.txt
@@ -190,7 +190,7 @@ echo "
 </html>
 " >> index.html
 
-if [ $log != "SUCSESSFUL" ]
+if [ $log != "SUCCESSFUL" ]
 then
 echo $log | mail -s “TITUS\ VALIDATION\ ERROR!!!!” b.richards@qmul.ac.uk
 fi
