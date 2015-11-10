@@ -4,7 +4,7 @@
 
 echo "<head>
 <meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-1\" />
-<title>TITUS Validation</title>
+<title>WCSim Validation</title>
 </head>
 
 <body>
