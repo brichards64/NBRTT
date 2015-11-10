@@ -9,12 +9,11 @@
 # Name PhysicsValidation nameonweb referencefile newfile
 #
 #
-CLHEP BuildTest ../build/CLHEP/install/bin/ clhep-config ../build/ts-titus/log/ clhep-build.log
-Geant BuildTest ../build/Geant4/install/bin/ geant4-config ../build/ts-titus/log/ geant4-build.log
-Root BuildTest ../build/root/bin/ root ../build/ts-titus/log/ root-build.log
-WChSandBox BuildTest ../build/ts-WChSandBox/bin/Linux-g++/ WChSandBox ../build/ts-titus/log/ ts-wchsandbox-build.log
-WChRecoSandBox BuildTest ../build/ts-WChRecoSandBox/lib/ libWCLAnalysis.so ../build/ts-titus/log/ ts-wchrecosandbox-build.log
-FullEvent.root FileTest ../build/ts-WChSandBox/FullEvent.root
-generatorcardfile.root FileTest ../build/ts-WChSandBox/generatorcardfile.root
-FullEvent.root PhysicsValidation FullEvent ./FullEvent.root ../output/FullEvent.root
-generatorcardfile.root PhysicsValidation generatorcardfile ./generatorcardfile.root ../output/generatorcardfile.root
+CLHEP BuildTest ../build/CLHEP/install/bin/ clhep-config ../build/hk-hyperk/log/ clhep-build.log
+Geant BuildTest ../build/Geant4/install/bin/ geant4-config ../build/hk-hyperk/log/ geant4-build.log
+Root BuildTest ../build/root/bin/ root ../build/hk-hyperk/log/ root-build.log
+WCSim BuildTest ../build/WCSim/exe/bin/Linux-g++/  WCSim ../build/hk-hyperk/log/ wcsim-build.log
+wcsim.root FileTest ../build/WCSim/wcsim.root
+ben.root FileTest ../build/WCSim/sample-root-scripts/ben.root
+ben.root PhysicsValidation Ben ./ben.root ../output/ben.root
+
