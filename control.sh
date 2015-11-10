@@ -8,4 +8,4 @@ cd Validation
 ./newmakewebpage.sh
 cd ..
 
-cp -r Validation /users/richards/public_html/
+cp -r Validation/* /users/richards/public_html/TITUS
