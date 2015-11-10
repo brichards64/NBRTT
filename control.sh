@@ -1,8 +1,8 @@
 #!/bin/bash
 
 cd /data/richards/NBRTT/
-./build.sh
-./runsim.sh
+#./build.sh
+#./runsim.sh
 
 cd Validation
 ./newmakewebpage.sh

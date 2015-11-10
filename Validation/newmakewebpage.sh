@@ -126,7 +126,7 @@ do
 	    
 	    cd ../compout
 	    ./compareroot ../Validation/$var1 $var2 $var3 
-	    if [ $? -eq 0 ]
+	    if [ $? -ne 0 ]
 	    then
 		pass=#FF0000
 		log=$name" VALIDATION FAIL "
