@@ -18,3 +18,7 @@ FullEvent.root FileTest ../build/ts-WChSandBox/FullEvent.root
 generatorcardfile.root FileTest ../build/ts-WChSandBox/generatorcardfile.root
 FullEvent.root PhysicsValidation FullEvent ./FullEvent.root ../output/FullEvent.root
 generatorcardfile.root PhysicsValidation generatorcardfile ./generatorcardfile.root ../output/generatorcardfile.root
+PhotonMask.root FileTest ../build/ts-WChRecoSandBox/out.root
+SandFit.root FileTest ../build/ts-WChRecoSandBox/testout2.root
+PhotonMask.root PhysicsValidation PhotonMask ./out.root ../output/out.root
+SandFit.root PhysicsValidation SandFit ./testout2.root ../output/testout2.root
