@@ -8,7 +8,7 @@ echo "<head>
 </head>
 
 <body>
-<h1 align=\"center\">TITUS Validation</h1>
+<h1 align=\"center\">WCSim Validation</h1>
 
 <table width=\"800\" border=\"2\" align=\"center\">
 <legend>Validation history</legend>
@@ -184,7 +184,7 @@ echo `more index.html | sed s/xxxxlogmessagexxxx/"$message"/`  >index.html
 
 if [ "$log" != "SUCCESSFUL" ]
 then
-echo $log | mail -s “TITUS\ VALIDATION\ ERROR!!!!” b.richards@qmul.ac.uk
+echo $log | mail -s “WCSim\ VALIDATION\ ERROR!!!!” b.richards@qmul.ac.uk
 fi
 
 ####################################################
