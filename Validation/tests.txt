@@ -14,5 +14,5 @@ Geant BuildTest ../build/Geant4/install/bin/ geant4-config ../build/hk-hyperk/lo
 Root BuildTest ../build/root/bin/ root ../build/hk-hyperk/log/ root-build.log
 WCSim BuildTest ../build/WCSim/exe/bin/Linux-g++/  WCSim ../build/hk-hyperk/log/ wcsim-build.log
 wcsim.root FileTest ../build/WCSim/wcsim.root
-ben.root FileTest ../build/WCSim/sample-root-scripts/ben.root
-ben.root PhysicsValidation Ben ./ben.root ../output/ben.root
+testvars.root FileTest ../build/WCSim/sample-root-scripts/testvars.root
+testvars.root PhysicsValidation TestVars ./testvars.root ../output/testvars.root
