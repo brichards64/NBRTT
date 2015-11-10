@@ -110,5 +110,6 @@ ofstream title;
   menu<<" </body></html>";
   menu.close();
 
+  fullsame=(!fullsame);
   return fullsame;
 }

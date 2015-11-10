@@ -16,4 +16,3 @@ WCSim BuildTest ../build/WCSim/exe/bin/Linux-g++/  WCSim ../build/hk-hyperk/log/
 wcsim.root FileTest ../build/WCSim/wcsim.root
 ben.root FileTest ../build/WCSim/sample-root-scripts/ben.root
 ben.root PhysicsValidation Ben ./ben.root ../output/ben.root
-

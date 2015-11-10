@@ -1,5 +1,7 @@
 #!/bin/bash
+
 cd /data/hyperk/WCSIMValidation/NBRTT
+
 #./build.sh
 #./runsim.sh
 
