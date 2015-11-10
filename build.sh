@@ -10,4 +10,6 @@ git checkout -b tags/v1r1.1 tags/v1r1.1
 echo '2'|./get_release.sh
 source Source_At_Start.sh
 ./build.sh build
+#cd ../WCSim
+#git checkout develop
 cd ../../

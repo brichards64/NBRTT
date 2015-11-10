@@ -2,7 +2,7 @@
 
 cd /data/hyperk/WCSimValidation/NBRTT
 
-#./build.sh
+./build.sh
 ./runsim.sh
 
 cd Validation
