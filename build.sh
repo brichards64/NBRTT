@@ -11,8 +11,8 @@ echo '2'|./get_release.sh
 source Source_At_Start.sh
 ./build.sh build
 cd ../WCSim
-git checkout develop
-source ../hk-hyperk/Source_At_Start.sh
-make clean
-make
+#git checkout develop
+#source ../hk-hyperk/Source_At_Start.sh
+#make clean
+#make
 cd ../../

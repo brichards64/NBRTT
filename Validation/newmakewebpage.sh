@@ -4,11 +4,11 @@
 
 echo "<head>
 <meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-1\" />
-<title>TITUS Validation</title>
+<title>WCSim Validation</title>
 </head>
 
 <body>
-<h1 align=\"center\">TITUS Validation</h1>
+<h1 align=\"center\">WCSim Validation</h1>
 
 <table width=\"800\" border=\"2\" align=\"center\">
 <legend>Validation history</legend>
@@ -222,7 +222,7 @@ echo `more index.html | sed s/xxxxlogmessagexxxx/"$message"/`  >index.html
 
 if [ "$log" != "SUCCESSFUL" ]
 then
-echo $log | mail -s “TITUS\ VALIDATION\ ERROR!!!!” b.richards@qmul.ac.uk
+echo $log | mail -s “WCSim\ VALIDATION\ ERROR!!!!” b.richards@qmul.ac.uk
 fi
 
 ####################################################
