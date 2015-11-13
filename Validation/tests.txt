@@ -9,13 +9,27 @@
 # Name PhysicsValidation nameonweb referencefile newfile
 #
 #
+# The webpage table can also be formatted by hadding blank lines by setting the Name=Blank e.g
+#
+# Blank
+#
+# Sub titles can be used to section off tests using the Name=Title and then any text you wish following. Note the coloumn headers will automatically be added after a title. e.g
+#
+# Title This is my title
+#
+#
 CLHEP BuildTest ../build/CLHEP/install/bin/ clhep-config ../build/ts-titus/log/ clhep-build.log
 Geant BuildTest ../build/Geant4/install/bin/ geant4-config ../build/ts-titus/log/ geant4-build.log
 Root BuildTest ../build/root/bin/ root ../build/ts-titus/log/ root-build.log
+
 WChSandBox BuildTest ../build/ts-WChSandBox/bin/Linux-g++/ WChSandBox ../build/ts-titus/log/ ts-wchsandbox-build.log
 WChRecoSandBox BuildTest ../build/ts-WChRecoSandBox/lib/ libWCLAnalysis.so ../build/ts-titus/log/ ts-wchrecosandbox-build.log
+Blank
 FullEvent.root FileTest ../build/ts-WChSandBox/FullEvent.root
 generatorcardfile.root FileTest ../build/ts-WChSandBox/generatorcardfile.root
+Title Sub tests Title
+Blank
+Blank
 FullEvent.root PhysicsValidation FullEvent ./FullEvent.root ../output/FullEvent.root
 generatorcardfile.root PhysicsValidation generatorcardfile ./generatorcardfile.root ../output/generatorcardfile.root
 PhotonMask.root FileTest ../build/ts-WChRecoSandBox/out.root

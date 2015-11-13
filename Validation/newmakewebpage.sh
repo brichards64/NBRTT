@@ -148,6 +148,44 @@ do
 
 	fi
 	
+####################################################  
+################## Blank line  ###############
+
+	if [ $test == "Blank" ]
+	then
+
+	  
+ echo "
+	    <tr>
+            <th colspan=\"3\"><span>&#8203;</span></th>
+	    </tr>
+">>index.html
+
+	fi
+	
+####################################################
+
+################## Title line  ###############
+
+	if [ $name == "Title" ]
+	then
+
+	    text=$(echo $line | sed s:$name:: )
+	  
+ echo "
+	    <tr>
+            <th colspan=\"3\">"$text"</th>
+	    </tr>
+            <tr>
+            <th scope='col'><div align='center'>Job Id </div></th>
+            <th scope='col'><div align='center'>Description</div></th>
+            <th scope='col'><div align'center'>Status</div></th>
+            </tr>
+
+">>index.html
+
+	fi
+	
 ####################################################
 
     fi
