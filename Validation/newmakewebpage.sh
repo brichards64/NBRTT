@@ -4,11 +4,11 @@
 
 echo "<head>
 <meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-1\" />
-<title>WCSim Validation</title>
+<title>TITUS Validation</title>
 </head>
 
 <body>
-<h1 align=\"center\">WCSim Validation</h1>
+<h1 align=\"center\">TITUS Validation</h1>
 
 <table width=\"800\" border=\"2\" align=\"center\">
 <legend>Validation history</legend>
@@ -140,10 +140,48 @@ do
 
  echo "
 	    <tr>
-	    <td bgcolor=\""$pass"\"><a href='"$var1"/index.html'>"$name"</td>
+	    <td bgcolor=\""$pass"\"><a href='"`echo $var1 | cut -f1 -d'.'`"/index.html'>"$name"</td>
 	    <td bgcolor=\""$pass"\">Physics Validation</td> 
 	    <td bgcolor=\""$pass"\">" `if [ $pass == "#00FF00" ] ; then  echo 'PASS';  else echo 'FAIL';  fi`"</td>
 	    </tr>
+">>index.html
+
+	fi
+	
+####################################################  
+################## Blank line  ###############
+
+	if [ $test == "Blank" ]
+	then
+
+	  
+ echo "
+	    <tr>
+            <th colspan=\"3\"><span>&#8203;</span></th>
+	    </tr>
+">>index.html
+
+	fi
+	
+####################################################
+
+################## Title line  ###############
+
+	if [ $name == "Title" ]
+	then
+
+	    text=$(echo $line | sed s:$name:: )
+	  
+ echo "
+	    <tr>
+            <th colspan=\"3\">"$text"</th>
+	    </tr>
+            <tr>
+            <th scope='col'><div align='center'>Job Id </div></th>
+            <th scope='col'><div align='center'>Description</div></th>
+            <th scope='col'><div align'center'>Status</div></th>
+            </tr>
+
 ">>index.html
 
 	fi
@@ -184,7 +222,7 @@ echo `more index.html | sed s/xxxxlogmessagexxxx/"$message"/`  >index.html
 
 if [ "$log" != "SUCCESSFUL" ]
 then
-echo $log | mail -s “WCSim\ VALIDATION\ ERROR!!!!” b.richards@qmul.ac.uk
+echo $log | mail -s “TITUS\ VALIDATION\ ERROR!!!!” b.richards@qmul.ac.uk
 fi
 
 ####################################################
