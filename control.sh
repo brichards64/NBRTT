@@ -6,6 +6,7 @@ cd /data/hyperk/WCSimValidation/NBRTT
 ./runsim.sh
 
 cd Validation
+source ../build/hk-hyperk/Source_At_Start.sh
 ./newmakewebpage.sh
 cd ..
 

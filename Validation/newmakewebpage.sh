@@ -140,7 +140,7 @@ do
 
  echo "
 	    <tr>
-	    <td bgcolor=\""$pass"\"><a href='"$var1"\index.html'>"$name"</td>
+	    <td bgcolor=\""$pass"\"><a href='"$var1"/index.html'>"$name"</td>
 	    <td bgcolor=\""$pass"\">Physics Validation</td> 
 	    <td bgcolor=\""$pass"\">" `if [ $pass == "#00FF00" ] ; then  echo 'PASS';  else echo 'FAIL';  fi`"</td>
 	    </tr>
